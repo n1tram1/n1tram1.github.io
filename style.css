@@ -45,6 +45,10 @@ li.hover-pinkish:hover {
     background-color: #FFE5EC;
 }
 
+.yellowish {
+    background: rgba(255, 255, 0, 0.3);
+}
+
 .post {
     grid-row-start: 2;
     grid-row-start: 2;
