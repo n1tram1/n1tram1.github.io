@@ -1,0 +1,29 @@
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  do-website:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get pandoc
+        run: |
+          sudo apt install -y pandoc
+
+      - uses: actions/checkout@v2
+
+      - name: Build HTML
+        run: |
+          make all
+
+      - name: Move HTML to public/
+        run: |
+          make install
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
