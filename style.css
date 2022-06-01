@@ -30,6 +30,7 @@ html {
     grid-column-start: 1;
     grid-column-end: 3;
     justify-self: center;
+    width: 70%;
 }
 
 li.hover-pinkish:hover {
@@ -43,6 +44,10 @@ li.hover-pinkish:hover {
 
 .pinkish {
     background-color: #FFE5EC;
+}
+
+.yellowish {
+    background: rgba(255, 255, 0, 0.3);
 }
 
 .post {
