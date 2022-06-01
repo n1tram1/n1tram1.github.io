@@ -9,7 +9,7 @@ html {
     display: grid;
 
     grid-template-columns: 20% auto;
-    grid-template-rows: 10% auto;
+    grid-template-rows: 10% auto 10%;
 }
 
 .blog-title {
@@ -23,6 +23,13 @@ html {
     grid-row-start: 2;
     grid-column-start: 1;
 
+}
+
+.footer {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-self: center;
 }
 
 li.hover-pinkish:hover {
