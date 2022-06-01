@@ -1,0 +1,63 @@
+<!doctype html>
+<html $if(lang)$ lang="$lang$" $endif$>
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+
+        <meta name="generator" content="pandoc" />
+        $for(author-meta)$
+        <meta name="author" content="$author-meta$" />
+        $endfor$
+        $if(date-meta)$
+        <meta name="date" content="$date-meta$" />
+        $endif$
+        <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+        <style type="text/css">code{white-space: pre;}</style>
+        $for(css)$
+        <link rel="stylesheet" href="$css$" $if(html5)$$else$type="text/css" $endif$/>
+        $endfor$
+        $for(header-includes)$
+        $header-includes$
+        $endfor$
+    </head>
+    <body>
+        <div class="container">
+            <a href="https://gnu.org" class="blog-title">
+                <h1>
+                <ins>
+                    <strong>
+                        Martin's fackin awesome p
+                    </strong>
+                </ins>
+                </h1>
+            </a>
+            <div class="navbar">
+                <div class="blueish">
+                    <ul>
+                        <li class="hover-pinkish">
+                            <a href="./hello.html">Hello</a>
+                        </li>
+                        <li class="hover-pinkish">
+                            <a href="./post1.html">First post</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="post">
+
+                <span class="doc-title">$title$</span>
+                <div class="row">
+                    $for(include-before)$
+                    $include-before$
+                    $endfor$
+                    $body$
+                    $for(include-after)$
+                    $include-after$
+                    $endfor$
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
